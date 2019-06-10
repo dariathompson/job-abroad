@@ -65,24 +65,25 @@
 // 1. Global
 // ---------
 
-$global-font-size: 16px; 
-$global-width: 1200px;
+$global-font-size: 14px; 
+$global-width: 1440px;
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #ff5912,
-  secondary: #767676,
+  primary: #FF893B,
+  secondary: #729CA2,
   success: #3adb76,
   warning: #ffae00,
   alert: #cc4b37,
 );
+$light-primary: #FBC099;
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #34404b;
 $white: #fefefe;
 $body-background: #f4f6f8;
-$body-font-color: #495662;
-$body-font-family: 'Harmonia Sans', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-color: #465461;
+$body-font-family: 'Montserrat', sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -121,7 +122,7 @@ $breakpoint-classes: (small medium large);
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
-  small: 20px,
+  small: 30px,
   medium: 30px,
 );
 $grid-column-align-edge: true;
