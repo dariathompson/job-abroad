@@ -1,25 +1,38 @@
 <header class="ba-header-wrap">    
-    <div class="ba-header-header flex-container align-justify">
-        <div class="row align-middle ">
-            <div class="column">
-                <a href="/">
-                    <img src="{{root}}assets/img/logo.png" alt="Logo">
-                </a>
-            </div>
-            <!-- /.column -->
-            <div class="column shrink">
-                <button class="menu-icon dark hide-for-medium" type="button" data-open="offCanvas" aria-label="Show menu">
-                        </button>
-                <ul class="menu ba-main-menu show-for-medium">
-                    <li {{#ifpage 'index'}} class="active" {{/ifpage}}><a href="index.html">Become a host</a></li>
-                    <li {{#ifpage 'index'}} class="active" {{/ifpage}}><a href="index.html">Sign up</a></li>
-                    <li {{#ifpage 'index'}} class="active" {{/ifpage}}><a href="index.html">Sign in</a></li>
-                    <li {{#ifpage 'index'}} class="active" {{/ifpage}}><a href="index.html">About service</a></li>
-
-                </ul>
-            </div>
-            <!-- /.column -->
+    <div class="ba-header-header">
+        <div class="row  column  align-middle">
+                <div class="ba-header-bar  flex-container align-justify align-middle">
+                    <div class="ba-header-bar__left flex-container align-middle">
+                        <a href="/">
+                                <img src="{{root}}assets/img/logo.png" alt="Logo">
+                            </a>
+                        </div>
+                        <!-- /ba-header-bar-left -->
+                        <div class="ba-header-bar__center  hide-for-medium flex-container align-middle">
+                                <h1 class="ba-title">JobAbroad</h1>                            
+                                </div>
+                                    <!-- / ba-header-bar__center-->
+                                
+                                        <div class="ba-header-bar__right  hide-for-medium flex-container align-middle">
+                                                <button  type="button" data-open="offCanvas" aria-label="Show menu">
+                                                        <img src="{{root}}assets/img/profile.png" alt="profile">
+                                                </button>
+                                            </div>
+                                            <!-- /ba-header-bar__right   -->
+                                            <ul class="menu ba-main-menu show-for-medium">
+                                                <li {{#ifpage 'index'}} class="active" {{/ifpage}}><a href="index.html">Become a host</a></li>
+                                                <li {{#ifpage 'index'}} class="active" {{/ifpage}}><a href="index.html">Sign up</a></li>
+                                                <li {{#ifpage 'index'}} class="active" {{/ifpage}}><a href="index.html">Sign in</a></li>
+                                                <li {{#ifpage 'index'}} class="active" {{/ifpage}}><a href="index.html">About service</a></li>
+                            
+                                            </ul>
+                                                
+                
+                                               
         </div>
-        <!-- /.row -->
+       <!-- /ba-header-bar -->
     </div>
+   <!-- /.row -->
+</div>
+  <!-- /header-header -->
 </header>
