@@ -1,4 +1,11 @@
+header{
+    position: absolute;
+    top:17px;
+    left:0;
+    width: 100%; 
+}
 .ba-main-menu{
+    
     a{
         color: $black;
         &:hover{
@@ -12,4 +19,7 @@
             padding: 10px;
         }
     }
+}
+.ba-header-header{
+    background: $light-primary;
 }
