@@ -1,15 +1,44 @@
-<section class="ba-section ba-intro">
-        <div class="ba-container">
-            <div class="row">
-        <div class="col-large-12 col-large-12 ">
-        
-        </div>
-        <!-- end column -->
+---
+title: JobAbroad
+---
+<section class="ba-intro">
+    <div class="row column">
+        <div class="ba-intro__inner">
+            <h1 class="ba-title">
+                JobAbroad
+            </h1>
+            <!-- /.ba-title -->
+            <div class="ba-suptitle">
+                <p>New opportunities anywhere in the world.</p>
+                <p>Discover them!</p>
             </div>
-        <!-- /end row -->
-        <h1 class="ba-title">JobAbroad</h1>
-        
+            <!-- /.ba-suptitle -->
+            <form action="#" method="POST" class="search-form">
+                <label for="start">COUNTRY/ CITY</label>
+                <input required type="text" id="country" name="country/city" placeholder="Where are you going?">
+                <div class="row">
+                    <div class="column small-6">
+                        <label for="start">DEPART</label>
+                        <input type="date" id="start" name="depart">
+                    </div>
+                    <!-- /.column small-6 -->
+                    <div class="column small-6">
+                        <label for="end">DEPART</label>
+                        <input type="date" id="end" name="arrive">
+                    </div>
+                    <!-- /.column small-6 -->
+                </div>
+                <!-- /.row -->
+                <label for="job">TYPE OF JOB</label>
+                <select name="jobtype" id="job">
+                    <option selected value="any">Any type</option>
+                </select>
+                <button type="submit" class="ba-button">Search</button>
+            </form>
+            <!-- /.ba-search-form -->
         </div>
-        <!-- /ba-container -->
-        </section>
-        <!-- end ba-intro -->
+        <!-- /.ba-intro__inner -->
+    </div>
+    <!-- /.row column -->
+</section>
+<!-- /.ba-intro -->
