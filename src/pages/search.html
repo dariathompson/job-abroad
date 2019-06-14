@@ -2,6 +2,129 @@
 title: Search
 ---
 <div class="row ba-main-content">
-    
+    <div class="column small-12 medium-7">
+        <form action="#" method="GET" class="search-form search-form--big">
+            <label for="search">COUNTRY/ CITY</label>
+            <input required type="text" id="search" name="country/city" placeholder="Where are you going?">
+
+            <div class="row flex-container align-justify ba-row-pd">
+                <div class="search-form__date">
+                    <label for="depart">DEPART</label>
+                    <input type="date" id="depart" name="depart">
+                </div>
+                <!-- /.column small-6 -->
+                <div class="search-form__date">
+                    <label for="arrive">ARRIVE</label>
+                    <input type="date" id="arrive" name="arrive">
+                </div>
+                <!-- /.column small-6 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="column">
+                    <label for="type">TYPE OF JOB</label>
+                    <select name="jobtype" id="type">
+                        <option selected value="any">Any type</option>
+                        <option value="repairing">House repairing</option>
+                        <option value="repairs">Small repairs</option>
+                        <option value="cleaning">Cleaning</option>
+                        <option value="farm">Work on farm</option>
+                        <option value="animal">Animal care</option>
+                        <option value="babysitting">Babysitting/ Nursing</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <!-- /.column small-6 -->
+            </div>
+            <!-- /.row -->
+            <div class="flex-container align-middle align-right">
+                <a href="#" class="ba-button">Change dates</a>
+                <button type="submit" class="button">
+                    Search
+                </button>
+            </div>
+        </form>
+        <!-- /.ba-search-form -->
+        <div class="ba-more-filters flex-container align-middle align-right">
+            <a href="#">
+                <img src="{{root}}assets/img/more.png" alt="more">
+            </a>
+            <a href="#" class="ba-more-filters__link">
+                More filters
+            </a>
+        </div>
+        <!-- /.ba-more-filters -->
+        <div class="ba-host">
+            26 hosts in San Sebastian, Spain
+        </div>
+        <!-- /.ba-host -->
+        <div class="row">
+                {{#repeat 8}}
+            <div class="column small-12 large-6">
+                <div class="ba-card">
+                    <div class="flex-container align-justify">
+                        <h3 class="ba-card__title">Roberto Sanchez</h3>
+                        <!-- /.ba-card__title -->
+                        <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.418 11.5821L1.18155 2.90697C0.593702 2.35513 0.593702 1.46041 1.18155 0.908832C1.76888 0.357212 2.72147 0.357212 3.30875 0.908832L11.4816 8.58499L19.6541 0.909056C20.2417 0.357435 21.1942 0.357435 21.7815 0.909056C22.3691 1.46068 22.3691 2.35535 21.7815 2.90719L12.5449 11.5823C12.2511 11.8581 11.8665 11.9959 11.4816 11.9959C11.0966 11.9959 10.7116 11.8579 10.418 11.5821Z" fill="#465461"/>
+                            </svg>
+                            
+                    </div>
+                    <!-- /.flex-container -->
+                    <p class="ba-card__suptitle">
+                        San Sebastian, Spain
+                    </p>
+                    <!-- /.ba-card__suptitle -->
+                    <div class="row">
+                        <div class="column small-4">
+                            <img src="{{root}}assets/img/host.jpg" alt="host">
+                            <p>replies within 1-3 days</p>
+                        </div>
+                        <!-- /.column small-4 -->
+
+                        <div class="column small-8">
+                            <ul class="ba-card__list">
+                                <li class="ba-card__item">
+                                    
+                                    <p><img src="{{root}}assets/img/coma.png" alt="coma">10 references</p>
+                                </li>
+                                <!-- /.ba-card__item -->
+                                <li class="ba-card__item">
+                                    <p><img src="{{root}}assets/img/people.png" alt="people">10 friends</p>
+                                </li>
+                                <!-- /.ba-card__item -->
+                                <li class="ba-card__item">
+                                    <p><img src="{{root}}assets/img/handyman.png" alt="people">Needs help to repair a farm</p>
+                                </li>
+                                <!-- /.ba-card__item -->
+                                <li class="ba-card__item">
+                                    <p><img src="{{root}}assets/img/planet.png" alt="people">Speaks <b>English, Spanish</b></p>
+                                </li>
+                                <!-- /.ba-card__item -->
+                                <li class="ba-card__item">
+                                    <p><img src="{{root}}assets/img/sofa.png" alt="people">Provides <b>Separate room</b> with <b>single bed</b></p>
+                                </li>
+                                <!-- /.ba-card__item -->
+                                
+                            </ul>
+                            <!-- /.ba-card__list -->
+                        </div>
+                        <!-- /.column small-8 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.ba-card -->
+            </div>
+            <!-- /.column small-12 medium-6 -->
+            {{/repeat}}
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.column small-12 medium-7 -->
+    <div class="column small-12 medium-5 show-for-medium">
+        <div id="ba-map"></div>
+        <div id="ba-destination"></div>
+    </div>
+    <!-- /.column small-12 medium-5 -->
 </div>
 <!-- /.row ba-main-content -->
