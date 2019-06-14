@@ -3,7 +3,7 @@ title: JobAbroad
 ---
 <section class="ba-intro">
     <div class="row column">
-        <div class="ba-intro__inner">
+        <div class="ba-intro__inner show-for-medium">
             <h1 class="ba-title">
                 JobAbroad
             </h1>
@@ -13,31 +13,51 @@ title: JobAbroad
                 <p>Discover them!</p>
             </div>
             <!-- /.ba-suptitle -->
-            <form action="#" method="POST" class="search-form">
-                <label for="start">COUNTRY/ CITY</label>
-                <input required type="text" id="country" name="country/city" placeholder="Where are you going?">
-                <div class="row">
-                    <div class="column small-6">
-                        <label for="start">DEPART</label>
-                        <input type="date" id="start" name="depart">
-                    </div>
-                    <!-- /.column small-6 -->
-                    <div class="column small-6">
-                        <label for="end">DEPART</label>
-                        <input type="date" id="end" name="arrive">
-                    </div>
-                    <!-- /.column small-6 -->
-                </div>
-                <!-- /.row -->
-                <label for="job">TYPE OF JOB</label>
-                <select name="jobtype" id="job">
-                    <option selected value="any">Any type</option>
-                </select>
-                <button type="submit" class="ba-button">Search</button>
-            </form>
-            <!-- /.ba-search-form -->
+
         </div>
         <!-- /.ba-intro__inner -->
+        <div class="ba-intro-small hide-for-medium">
+            <h2>New opportunities anywhere in the world. Discover them!</h2>
+        </div>
+        <!-- /.ba-intro-small -->
+        <form action="{{root}}search.html" method="GET" class="search-form search-form--absolute">
+            <label for="country">COUNTRY/ CITY</label>
+            <input required type="text" id="country" name="country/city" placeholder="Where are you going?">
+            <div class="row flex-container align-justify ba-row-pd">
+                <div>
+                    <label for="start">DEPART</label>
+                    <input type="date" id="start" name="depart">
+                </div>
+                <!-- /.column small-6 -->
+                <div>
+                    <label for="end">ARRIVE</label>
+                    <input type="date" id="end" name="arrive">
+                </div>
+                <!-- /.column small-6 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="column small-6">
+                    <label for="job">TYPE OF JOB</label>
+                    <select name="jobtype" id="job">
+                        <option selected value="any">Any type</option>
+                        <option value="repairing">House repairing</option>
+                        <option value="repairs">Small repairs</option>
+                        <option value="cleaning">Cleaning</option>
+                        <option value="farm">Work on farm</option>
+                        <option value="animal">Animal care</option>
+                        <option value="babysitting">Babysitting/ Nursing</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <!-- /.column small-6 -->
+            </div>
+            <!-- /.row -->
+            <button type="submit" class="button">
+                Search
+            </button>
+        </form>
+        <!-- /.ba-search-form -->
     </div>
     <!-- /.row column -->
 </section>
