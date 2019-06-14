@@ -1,6 +1,38 @@
 .ba-footer{
-    
+   
 }
-.ba-copyright{
-    
+
+.ba-socials{
+    align-items: center;
+@include breakpoint(small){
+    a{
+        width:42px;
+         height:42px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+        margin-left:25px;
+     background: #fff;
+     border-radius: 50%;
 }
+    }
+
+}
+.ba-socials{
+    @include breakpoint(large){
+        svg{
+            color:#fff;
+        }
+        a{
+            width:42px;
+             height:42px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+            margin-left:25px;
+         background:$primary-color;
+         border-radius: 50%;
+    }
+        }
+    
+    }
