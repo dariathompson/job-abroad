@@ -45,7 +45,8 @@ body{
     input{
         margin-bottom: 34px;
     }
-    [type="date"]{
+    [type="date"],[data-toggle="datepicker"]
+     {
         max-width: 130px;
     }
     

@@ -13,6 +13,8 @@ window.jQuery = $;
 // the line below
 import './lib/foundation-explicit-pieces';
 
+import datepicker from '@chenfengyuan/datepicker';
+
 import './lib/slick.min.js';
 
 $(document).foundation();
@@ -22,22 +24,24 @@ $(document).foundation();
 // Initialize and add the map
 function initMap() {
     // The location of San Sebastian
-    let sebastian = {
-        lat: 43.318333,
-        lng: -1.981231
+    let philadelphia = {
+        lat: 39.9525839,
+        lng: -75.1652215
     };
     // The map, centered at Uluru
     let map = new google.maps.Map(
         document.getElementById('ba-map'), {
             zoom: 13,
-            center: sebastian
+            center: philadelphia
         });
     // The marker, positioned at seb
     let marker = new google.maps.Marker({
         icon: 'assets/img/marker.png',
-        position: sebastian,
+        position: philadelphia,
+        mapTypeId: 'roadmap',
         map: map
     });
+    
 }
 
 
@@ -83,9 +87,22 @@ function displayMatches() {
 const searchInput = document.getElementById('search');
 const suggestions = document.getElementById("ba-destination");
 
-searchInput.addEventListener('change', displayMatches);
-searchInput.addEventListener('keyup', displayMatches);
+// searchInput.addEventListener('change', displayMatches);
+// searchInput.addEventListener('keyup', displayMatches);
 // <li>
     // 	<span class = "name">${place.city}, ${place.state}</span>
     // 	<span class = "population">${place.population}</span>
 // </li>
+
+let today = new Date();
+console.log(today);
+
+
+$('[data-toggle="datepicker"]').datepicker({
+   format: 'dd.mm.YYYY',
+   weekStart: 1,
+   startView: 0,
+   yearFirst: false,
+   yearSuffix: '',
+   startDate: today
+});

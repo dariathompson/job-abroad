@@ -1,9 +1,13 @@
 .ba-footer{
-   
-}
+   background: $primary-color;
+   @include breakpoint(medium){
+    background: #fff;
+   }
+   }
 
 .ba-socials{
     align-items: center;
+    padding:10px 0;
 @include breakpoint(small){
     a{
         width:42px;
@@ -12,6 +16,10 @@
          align-items: center;
          justify-content: center;
         margin-left:25px;
+        &:first-child{
+            margin-left:0;
+ 
+        }
      background: #fff;
      border-radius: 50%;
 }
@@ -36,3 +44,6 @@
         }
     
     }
+.ba-copyright{
+    padding:26px 0;
+}

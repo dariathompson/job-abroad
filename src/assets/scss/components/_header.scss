@@ -1,7 +1,12 @@
 header{
+    position: absolute;
+    top:17px;
+   left:0;
+  width: 100%; 
+
     @include breakpoint(medium){
         position: absolute;
-        top:17px;
+        top:0;
        left:0;
       width: 100%; 
     }
@@ -35,4 +40,7 @@ header{
 .ba-header-header{
     background: $light-primary;
     
+}
+.ba-header-bar__title{
+    margin-bottom:0;
 }
