@@ -34,9 +34,9 @@ function initMap() {
             zoom: 13,
             center: philadelphia
         });
-    // The marker, positioned at Uluru
+    // The marker, positioned at seb
     let marker = new google.maps.Marker({
-
+        icon: 'assets/img/marker.png',
         position: philadelphia,
         mapTypeId: 'roadmap',
         map: map
