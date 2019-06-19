@@ -7,15 +7,16 @@ title: Search
             <label for="search">COUNTRY/ CITY</label>
             <input required type="text" id="search" name="country/city" placeholder="Where are you going?">
 
-            <div class="row flex-container align-justify ba-row-pd">
+            <div class="row flex-container  align-justify ba-row-pd">
                 <div class="search-form__date">
-                    <label for="depart">DEPART</label>
-                    <input type="date" id="depart" name="depart">
+                    <label  for="depart">DEPART</label>
+                    <input  data-toggle="datepicker" id="depart" name="depart" placeholder="dd-mm-yy">
                 </div>
                 <!-- /.column small-6 -->
+
                 <div class="search-form__date">
                     <label for="arrive">ARRIVE</label>
-                    <input type="date" id="arrive" name="arrive">
+                    <input data-toggle="datepicker" id="arrive" name="arrive"  placeholder="dd-mm-yy">
                 </div>
                 <!-- /.column small-6 -->
             </div>
@@ -39,7 +40,7 @@ title: Search
             <!-- /.row -->
             <div class="flex-container align-middle align-right">
                 <a href="#" class="ba-button">Change dates</a>
-                <button type="submit" class="button">
+                <button id="Search Box" type="submit" class="button">
                     Search
                 </button>
             </div>
