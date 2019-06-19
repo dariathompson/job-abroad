@@ -34,13 +34,8 @@ function initMap() {
             zoom: 13,
             center: philadelphia
         });
-    // The marker, positioned at seb
-    let marker = new google.maps.Marker({
-        icon: 'assets/img/marker.png',
-        position: philadelphia,
-        mapTypeId: 'roadmap',
-        map: map
-    });
+    
+    
     
 }
 
@@ -54,7 +49,7 @@ $(document).ready(function (e) {
 
 //list of cities
 const endpoint =
-    'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+    "data/data.json";
 
 const cities = [];
 
@@ -69,26 +64,61 @@ function findMatches(wordToMatch, cities) {
     });
 }
 
-function displayMatches() {
-    const matchArray = findMatches(this.value, cities);
-    const html = matchArray.map(place => {
-       
-        const regex = new RegExp(this.value, 'gi');
-        return `
-        <li>
-             <span class = "ba-destination-name">${place.city}, ${place.state}</span>
-        </li>
-        
-        `;
-    }).join('');
-    suggestions.innerHTML = html;
-}
+
+const searchForm = document.getElementById('search-form');
+const hostResults = document.getElementById('hostResults');
+const cardTmpl = document.getElementById("cardTmpl").innerHTML;
+
+searchForm.addEventListener('submit', displayMatches);
 
 const searchInput = document.getElementById('search');
+
+function displayMatches(event) {
+    event.preventDefault();
+    const matchArray = findMatches(searchInput.value, cities);
+    const markersCoords = [];
+
+    const html = matchArray.map(place => {
+
+        // The marker, positioned at seb
+        markersCoords.push(
+            {
+                lat: place.latitude,
+                lng: place.longitude
+            }
+        );
+
+        let marker = new google.maps.Marker({
+            icon: 'assets/img/marker.png',
+            position: markersCoords,
+            mapTypeId: 'roadmap'
+           
+        });
+        const regex = new RegExp(searchInput.value, 'gi');
+        let cardHtml  = cardTmpl
+                        .replace(/🦄name🦄/ig, place.personInfo.name)
+                        .replace(/🦄city🦄/ig, place.city)
+                        .replace(/🦄friends🦄/ig, place.personInfo.friends)
+                        .replace(/🦄languages🦄/ig, place.personInfo.languages)
+                        .replace(/🦄references🦄/ig, place.personInfo.references)
+                        ;
+
+        return cardHtml;
+
+
+    }).join('');
+    hostResults.innerHTML = html;
+// The marker, positioned at seb
+   
+    console.log(markersCoords);  
+      
+}
+
 const suggestions = document.getElementById("ba-destination");
 
 // searchInput.addEventListener('change', displayMatches);
 // searchInput.addEventListener('keyup', displayMatches);
+
 // <li>
     // 	<span class = "name">${place.city}, ${place.state}</span>
     // 	<span class = "population">${place.population}</span>
