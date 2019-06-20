@@ -71,14 +71,19 @@ searchForm.addEventListener('submit', displayMatches);
 
 const searchInput = document.getElementById('search');
 
+const destination = document.getElementById("ba-destination"); // new
+const baHost = document.getElementById("baHost"); // new
+
 function displayMatches(event) {
     event.preventDefault();
     const matchArray = findMatches(searchInput.value, cities);
     const markersCoords = [];
 
+
+
     const html = matchArray.map(place => {
 
-        // The marker, positioned at seb
+        // The marker, positioned at result
         markersCoords.push(
             {
                 lat: place.latitude,
@@ -87,7 +92,7 @@ function displayMatches(event) {
         );
         
 
-        const regex = new RegExp(searchInput.value, 'gi');
+        // const regex = new RegExp(searchInput.value, 'gi');
         let cardHtml  = cardTmpl
                         .replace(/🦄name🦄/ig, place.personInfo.name)
                         .replace(/🦄city🦄/ig, place.city)
@@ -97,14 +102,37 @@ function displayMatches(event) {
                         .replace(/🦄img🦄/ig, place.personInfo.img)
                         .replace(/🦄room🦄/ig, place.personInfo.accomodaion)
                         ;
+
                        
+       
+                        
         return cardHtml;
-     
+        
+
 
     }).join('');
     hostResults.innerHTML = html;
-// The marker, positioned at seb
-   
+
+    // show destination under the map
+    const destinationHtml =  matchArray.map(place =>{
+        return `
+				<li>
+                    <span class = "destination-name">${place.city}, ${place.state}</span>
+				</li>
+				
+				`;
+    }).join('');
+    destination.innerHTML = destinationHtml;
+
+
+    // show number of hosts in location
+    const hostHtml =  matchArray.map(place =>{
+        return `
+                    <span class = "destination-name">2 hosts in ${place.city}, ${place.state}</span>
+				`;
+    }).join('');
+    baHost.innerHTML = hostHtml;
+    
     // console.log(markersCoords);  
     markersCoords.forEach(coord => {
         let marker = new google.maps.Marker({
@@ -118,7 +146,7 @@ function displayMatches(event) {
     map.setCenter(markersCoords[0]);
 }
 
-const suggestions = document.getElementById("ba-destination");
+
 
 // searchInput.addEventListener('change', displayMatches);
 // searchInput.addEventListener('keyup', displayMatches);
@@ -129,7 +157,7 @@ const suggestions = document.getElementById("ba-destination");
 // </li>
 
 let today = new Date();
-console.log(today);
+// console.log(today);
 
 
 $('[data-toggle="datepicker"]').datepicker({
