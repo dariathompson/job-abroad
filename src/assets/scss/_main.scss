@@ -41,9 +41,15 @@ body{
     select{
         border-radius: 5px;
         margin-bottom: 34px;
+        &:focus{
+            box-shadow: 0px 0px 0px 3px $secondary-color;
+        }
     }
     input{
         margin-bottom: 34px;
+        &:focus{
+            box-shadow: 0px 0px 0px 3px $secondary-color;
+        }
     }
     [type="date"],[data-toggle="datepicker"]
      {

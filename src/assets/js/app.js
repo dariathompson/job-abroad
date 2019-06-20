@@ -76,7 +76,7 @@ function displayMatches(event) {
 
     const html = matchArray.map(place => {
 
-        // The marker, positioned at seb
+        // The marker, positioned at result
         markersCoords.push(
             {
                 lat: place.latitude,
@@ -92,12 +92,14 @@ function displayMatches(event) {
                         .replace(/🦄languages🦄/ig, place.personInfo.languages)
                         .replace(/🦄references🦄/ig, place.personInfo.references)
                         ;
-
+        
+        console.log(place.city);
+                        
         return cardHtml;
+        
 
     }).join('');
     hostResults.innerHTML = html;
-// The marker, positioned at seb
    
     // console.log(markersCoords);  
     markersCoords.forEach(coord => {
