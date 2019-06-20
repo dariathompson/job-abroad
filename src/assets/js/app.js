@@ -20,6 +20,7 @@ import './lib/slick.min.js';
 $(document).foundation();
 
 
+let map;
 
 // Initialize and add the map
 function initMap() {
@@ -29,18 +30,13 @@ function initMap() {
         lng: -75.1652215
     };
     // The map, centered at Uluru
-    let map = new google.maps.Map(
+    map = new google.maps.Map(
         document.getElementById('ba-map'), {
             zoom: 13,
             center: philadelphia
-        });
-    
-    
+        });   
     
 }
-
-
-
 
 
 $(document).ready(function (e) {
@@ -88,12 +84,6 @@ function displayMatches(event) {
             }
         );
 
-        let marker = new google.maps.Marker({
-            icon: 'assets/img/marker.png',
-            position: markersCoords,
-            mapTypeId: 'roadmap'
-           
-        });
         const regex = new RegExp(searchInput.value, 'gi');
         let cardHtml  = cardTmpl
                         .replace(/🦄name🦄/ig, place.personInfo.name)
@@ -105,13 +95,21 @@ function displayMatches(event) {
 
         return cardHtml;
 
-
     }).join('');
     hostResults.innerHTML = html;
 // The marker, positioned at seb
    
-    console.log(markersCoords);  
-      
+    // console.log(markersCoords);  
+    markersCoords.forEach(coord => {
+        let marker = new google.maps.Marker({
+            icon: 'assets/img/marker.png',
+            position: coord,
+            mapTypeId: 'roadmap',
+            map: map         
+        });
+    });   
+
+    map.setCenter(markersCoords[0]);
 }
 
 const suggestions = document.getElementById("ba-destination");
