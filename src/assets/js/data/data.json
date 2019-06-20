@@ -128,7 +128,7 @@
         "state": "Pennsylvania",
         "personInfo": {
             "img": "assets/img/phoebe.jpg",
-            "name": "Phoebe Buffay, Regina Filingi",
+            "name": "Phoebe Buffay",
             "references": "10",
             "friends": "2",
             "languages": ["English", " French"],
@@ -247,7 +247,7 @@
         "state": "Pennsylvania",
         "personInfo": {
             "img": "assets/img/phoebe.jpg",
-            "name": "Mona",
+            "name": "Regina Filingi",
             "references": "10",
             "friends": "2",
             "languages": ["English", " French"],

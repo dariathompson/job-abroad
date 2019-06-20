@@ -47,6 +47,7 @@ $(document).ready(function (e) {
 const endpoint =
     "data/data.json";
 
+    
 const cities = [];
 
 fetch(endpoint)
@@ -56,7 +57,8 @@ fetch(endpoint)
 function findMatches(wordToMatch, cities) {
     return cities.filter(place => {
         const regex = new RegExp(wordToMatch, 'gi');
-        return place.city.match(regex) || place.state.match(regex)
+        return place.city.match(regex) || place.state.match(regex);
+       
     });
 }
 
@@ -94,11 +96,10 @@ function displayMatches(event) {
                         .replace(/🦄references🦄/ig, place.personInfo.references)
                         .replace(/🦄img🦄/ig, place.personInfo.img)
                         .replace(/🦄room🦄/ig, place.personInfo.accomodaion)
-
-
                         ;
-
+                       
         return cardHtml;
+     
 
     }).join('');
     hostResults.innerHTML = html;
