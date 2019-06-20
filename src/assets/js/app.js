@@ -32,7 +32,7 @@ function initMap() {
     // The map, centered at Uluru
     map = new google.maps.Map(
         document.getElementById('ba-map'), {
-            zoom: 13,
+            zoom:8,
             center: philadelphia
         });   
     
@@ -83,6 +83,7 @@ function displayMatches(event) {
                 lng: place.longitude
             }
         );
+        
 
         const regex = new RegExp(searchInput.value, 'gi');
         let cardHtml  = cardTmpl
@@ -91,6 +92,10 @@ function displayMatches(event) {
                         .replace(/🦄friends🦄/ig, place.personInfo.friends)
                         .replace(/🦄languages🦄/ig, place.personInfo.languages)
                         .replace(/🦄references🦄/ig, place.personInfo.references)
+                        .replace(/🦄img🦄/ig, place.personInfo.img)
+                        .replace(/🦄room🦄/ig, place.personInfo.accomodaion)
+
+
                         ;
         
         console.log(place.city);
