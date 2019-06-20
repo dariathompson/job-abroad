@@ -91,8 +91,8 @@ function displayMatches(event) {
         let marker = new google.maps.Marker({
             icon: 'assets/img/marker.png',
             position: markersCoords,
-            mapTypeId: 'roadmap'
-           
+            mapTypeId: 'roadmap',
+          
         });
         const regex = new RegExp(searchInput.value, 'gi');
         let cardHtml  = cardTmpl

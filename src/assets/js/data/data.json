@@ -2,14 +2,14 @@
     {
         "city": "New York", 
         "growth_from_2000_to_2013": "4.8%", 
-        "latitude": 40.7127837, 
-        "longitude": -74.0059413, 
+        "latitude": 40.775722345461354, 
+        "longitude": -73.97782033417968, 
         "population": "8405837", 
         "rank": "1", 
         "state": "New York",
         "personInfo": {
-            "img": "assets/img/host.jpg",
-            "name": "Roberto Sanchez",
+            "img": "assets/img/karol.jpg",
+            "name": "Carol Willick",
             "references": "10",
             "friends": "10",
             "languages": ["English", " Spanish"],
@@ -18,7 +18,7 @@
     }, 
     {
         "city": "New York", 
-        "growth_from_2000_to_2013": "4.8%", 
+        "growth_from_2000_to_2013": "5%", 
         "latitude": 40.7127837, 
         "longitude": -74.0059413, 
         "population": "8405837", 
@@ -27,8 +27,8 @@
         "personInfo": {
             "img": "assets/img/host.jpg",
             "name": "Maria Sanchez",
-            "references": "10",
-            "friends": "10",
+            "references": "8",
+            "friends": "15",
             "languages": ["English", " Spanish"],
             "accomodaion": "Separate room"
         }
