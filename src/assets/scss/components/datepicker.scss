@@ -21,7 +21,7 @@
     [type='text']:focus, [data-toggle="datepicker"]:focus, [type='password']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='week']:focus, [type='email']:focus, [type='number']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='url']:focus, [type='color']:focus,
     textarea:focus {
       outline: none;
-      border: 3px solid #729CA2;
+      // border: 3px solid #729CA2;
       background-color: #fefefe;
       box-shadow: none;
       transition: box-shadow 0.5s, border-color 0.25s ease-in-out; }
