@@ -248,9 +248,9 @@
         "personInfo": {
             "img": "assets/img/phoebe.jpg",
             "name": "Regina Filingi",
-            "references": "10",
-            "friends": "2",
-            "languages": ["English", " French"],
+            "references": "8",
+            "friends": "5",
+            "languages": ["English", " German"],
             "accomodaion": "Separate room"
         }
     },
