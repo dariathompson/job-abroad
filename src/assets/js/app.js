@@ -97,6 +97,7 @@ function displayMatches(event) {
         let cardHtml  = cardTmpl
                         .replace(/🦄name🦄/ig, place.personInfo.name)
                         .replace(/🦄city🦄/ig, place.city)
+                        .replace(/🦄state🦄/ig, place.state)
                         .replace(/🦄friends🦄/ig, place.personInfo.friends)
                         .replace(/🦄languages🦄/ig, place.personInfo.languages)
                         .replace(/🦄references🦄/ig, place.personInfo.references)

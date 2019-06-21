@@ -16,6 +16,10 @@
          align-items: center;
          justify-content: center;
         margin-left:25px;
+        &:hover{
+        background: darken($color: $primary-color, $amount: 13%);
+        color: #EAE9E9;
+    }
         &:first-child{
             margin-left:0;
  
