@@ -80,6 +80,8 @@ function displayMatches(event) {
     const markersCoords = [];
 
 
+    console.log(map.markers);
+    
 
     const html = matchArray.map(place => {
 
@@ -91,7 +93,6 @@ function displayMatches(event) {
             }
         );
         
-
         // const regex = new RegExp(searchInput.value, 'gi');
         let cardHtml  = cardTmpl
                         .replace(/🦄name🦄/ig, place.personInfo.name)
@@ -103,38 +104,20 @@ function displayMatches(event) {
                         .replace(/🦄img🦄/ig, place.personInfo.img)
                         .replace(/🦄room🦄/ig, place.personInfo.accomodaion)
                         ;
-
-                       
-       
                         
         return cardHtml;
-        
-
-
     }).join('');
     hostResults.innerHTML = html;
 
     // show destination under the map
-    const destinationHtml =  matchArray.map(place =>{
-        return `
-				<li>
-                    <span class = "destination-name">${place.city}, ${place.state}</span>
-				</li>
-				
-				`;
-    }).join('');
-    destination.innerHTML = destinationHtml;
-
+    destination.innerHTML = `${matchArray[0].city}, ${matchArray[0].state}`;
 
     // show number of hosts in location
-    const hostHtml =  matchArray.map(place =>{
-        return `
-                    <span class = "destination-name">2 hosts in ${place.city}, ${place.state}</span>
-				`;
-    }).join('');
-    baHost.innerHTML = hostHtml;
+    baHost.innerHTML = `${matchArray.length} hosts in ${matchArray[0].city}, ${matchArray[0].state}`;
     
-    // console.log(markersCoords);  
+    clearMarkers();
+    map.markers = [];
+    // console.log(markersCoords);
     markersCoords.forEach(coord => {
         let marker = new google.maps.Marker({
             icon: 'assets/img/marker.png',
@@ -142,12 +125,20 @@ function displayMatches(event) {
             mapTypeId: 'roadmap',
             map: map         
         });
+        map.markers.push(marker);
     });   
 
     map.setCenter(markersCoords[0]);
 }
 
-
+function clearMarkers() {
+    if(map.markers) {
+        for (var i = 0; i < map.markers.length; i++) {
+            map.markers[i].setMap(null);   
+        }
+        map.markers = [];
+    }
+}
 
 // searchInput.addEventListener('change', displayMatches);
 // searchInput.addEventListener('keyup', displayMatches);
