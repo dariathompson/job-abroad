@@ -1,0 +1,274 @@
+[
+    {
+        "city": "New York", 
+        "growth_from_2000_to_2013": "4.8%", 
+        "latitude": 40.775722345461354, 
+        "longitude": -73.97782033417968, 
+        "population": "8405837", 
+        "rank": "1", 
+        "state": "New York",
+        "personInfo": {
+            "img": "assets/img/karol.jpg",
+            "name": "Carol Willick",
+            "references": "5",
+            "friends": "22",
+            "languages": ["English", " Spanish"],
+            "accomodaion": "Separate room"
+        }
+    }, 
+    {
+        "city": "New York", 
+        "growth_from_2000_to_2013": "5%", 
+        "latitude": 40.7298634, 
+        "longitude": -74.0039573, 
+        "population": "8405837", 
+        "rank": "1", 
+        "state": "New York",
+        "personInfo": {
+            "img": "assets/img/chandler.jpg",
+            "name": "Chandler Muriel Bing",
+            "references": "8",
+            "friends": "15",
+            "languages": ["English", " Greek"],
+            "accomodaion": "Private room"
+        }
+    }, 
+    {
+        "city": "New York", 
+        "growth_from_2000_to_2013": "4.8%", 
+        "latitude": 40.654075973582444, 
+        "longitude": -74.0059413, 
+        "population": "8405837", 
+        "rank": "1", 
+        "state": "New York",
+        "personInfo": {
+            "img": "assets/img/david.jpg",
+            "name": "David Smith",
+            "references": "10",
+            "friends": "10",
+            "languages": ["English", " German"],
+            "accomodaion": "Separate room"
+        }
+    }, 
+    {
+        "city": "Los Angeles", 
+        "growth_from_2000_to_2013": "4.8%", 
+        "latitude": 34.120900139826965, 
+        "longitude": -118.0206298828125, 
+        "population": "3884307", 
+        "rank": "2", 
+        "state": "California",
+        "personInfo": {
+            "img": "assets/img/joe.jpg",
+            "name": "Joseph Francis Tribbiani",
+            "references": "5",
+            "friends": "15",
+            "languages": ["English", " French"],
+            "accomodaion": "Separate room"
+        }
+    }, 
+    {
+        "city": "Los Angeles", 
+        "growth_from_2000_to_2013": "-6.1%", 
+        "latitude": 33.747180448149855, 
+        "longitude": -118.38867187500001, 
+        "population": "3884307", 
+        "rank": "3", 
+        "state": "California",
+        "personInfo": {
+            "img": "assets/img/janice.jpg",
+            "name": "Janice Litman-Goralnik nee Hosenstein ",
+            "references": "10",
+            "friends": "2",
+            "languages": ["English", " Spanish"],
+            "accomodaion": "Separate room"
+        }
+    },
+    {
+        "city": "San Francisco", 
+        "growth_from_2000_to_2013": "-6.1%", 
+        "latitude": 37.7790262, 
+        "longitude": -122.4199061, 
+        "population": "3884307", 
+        "rank": "3", 
+        "state": "California",
+        "personInfo": {
+            "img": "assets/img/mike.jpg",
+            "name": "Mike Hannigan",
+            "references": "10",
+            "friends": "2",
+            "languages": ["English", " Danish"],
+            "accomodaion": "Separate room"
+        }
+    },
+    {
+        "city": "Washington", 
+        "growth_from_2000_to_2013": "-6.1%", 
+        "latitude": 38.8948932, 
+        "longitude": -77.0365529, 
+        "population": "3884307", 
+        "rank": "3", 
+        "state": "",
+        "personInfo": {
+            "img": "assets/img/monica.jpg",
+            "name": "Monica Geller-Bing",
+            "references": "10",
+            "friends": "2",
+            "languages": ["English", " German"],
+            "accomodaion": "Separate room"
+        }
+    },
+    {
+        "city": "Pittsburgh", 
+        "growth_from_2000_to_2013": "-6.1%", 
+        "latitude": 40.4416941, 
+        "longitude": -79.9900861, 
+        "population": "3884307", 
+        "rank": "3", 
+        "state": "Pennsylvania",
+        "personInfo": {
+            "img": "assets/img/phoebe.jpg",
+            "name": "Phoebe Buffay",
+            "references": "10",
+            "friends": "2",
+            "languages": ["English", " French"],
+            "accomodaion": "Separate room"
+        }
+    },
+    {
+        "city": "Houston", 
+        "growth_from_2000_to_2013": "-6.1%", 
+        "latitude": 29.7589382, 
+        "longitude": -95.3676974, 
+        "population": "3884307", 
+        "rank": "3", 
+        "state": "Texas",
+        "personInfo": {
+            "img": "assets/img/rachel.jpg",
+            "name": "Rachel Karen Green",
+            "references": "10",
+            "friends": "2",
+            "languages": ["English"],
+            "accomodaion": "Separate room"
+        }
+    },
+    {
+        "city": "Las Vegas", 
+        "growth_from_2000_to_2013": "-6.1%", 
+        "latitude": 36.1672559, 
+        "longitude": -115.1485163, 
+        "population": "3884307", 
+        "rank": "3", 
+        "state": "Nevada",
+        "personInfo": {
+            "img": "assets/img/richard.jpg",
+            "name": "Richard Edward Burke",
+            "references": "10",
+            "friends": "2",
+            "languages": ["English", " French"],
+            "accomodaion": "Separate room"
+        }
+    },
+    {
+        "city": "Las Vegas", 
+        "growth_from_2000_to_2013": "-6.1%", 
+        "latitude": 35.84453450421662, 
+        "longitude": -115.67504882812501, 
+        "population": "3884307", 
+        "rank": "3", 
+        "state": "Nevada",
+        "personInfo": {
+            "img": "assets/img/ross.jpg",
+            "name": "Ross Eustace Geller",
+            "references": "10",
+            "friends": "2",
+            "languages": ["English", " German"],
+            "accomodaion": "Separate room"
+        }
+    },
+    {
+        "city": "Springfield", 
+        "growth_from_2000_to_2013": "-6.1%", 
+        "latitude": 42.1014831, 
+        "longitude": -72.589811, 
+        "population": "3884307", 
+        "rank": "3", 
+        "state": "Massachusetts",
+        "personInfo": {
+            "img": "assets/img/gunther.jpg",
+            "name": "Gunther",
+            "references": "10",
+            "friends": "2",
+            "languages": ["English", " German"],
+            "accomodaion": "Separate room"
+        }
+    },
+    {
+        "city": "Pasadena", 
+        "growth_from_2000_to_2013": "-6.1%", 
+        "latitude": 34.1476452, 
+        "longitude": -118.1444779, 
+        "population": "3884307", 
+        "rank": "3", 
+        "state": "California",
+        "personInfo": {
+            "img": "assets/img/emily.jpg",
+            "name": "Emily Waltham",
+            "references": "10",
+            "friends": "2",
+            "languages": ["English", " German"],
+            "accomodaion": "Separate room"
+        }
+    },
+    {
+        "city": "Houston", 
+        "growth_from_2000_to_2013": "-6.1%", 
+        "latitude": 29.76437737516313, 
+        "longitude": -95.537109375, 
+        "population": "3884307", 
+        "rank": "3", 
+        "state": "Texas",
+        "personInfo": {
+            "img": "assets/img/paolo.jpg",
+            "name": "Paolo",
+            "references": "10",
+            "friends": "2",
+            "languages": ["Spanish"],
+            "accomodaion": "Separate room"
+        }
+    },
+    {
+        "city": "Pittsburgh", 
+        "growth_from_2000_to_2013": "-6.1%", 
+        "latitude": 40.3549167507906, 
+        "longitude": -79.80468750000001, 
+        "population": "3884307", 
+        "rank": "3", 
+        "state": "Pennsylvania",
+        "personInfo": {
+            "img": "assets/img/phoebe.jpg",
+            "name": "Regina Filingi",
+            "references": "8",
+            "friends": "5",
+            "languages": ["English", " German"],
+            "accomodaion": "Separate room"
+        }
+    },
+    {
+        "city": "Washington", 
+        "growth_from_2000_to_2013": "-6.1%", 
+        "latitude":38.88702437859767, 
+        "longitude": -77.14805603027344, 
+        "population": "3884307", 
+        "rank": "3", 
+        "state": "",
+        "personInfo": {
+            "img": "assets/img/tag.jpg",
+            "name": "Tag Jones",
+            "references": "55",
+            "friends": "65",
+            "languages": ["English", " German"],
+            "accomodaion": "Separate room"
+        }
+    }
+]
