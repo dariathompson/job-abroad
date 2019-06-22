@@ -182,4 +182,5 @@ $('[data-toggle="datepicker"]').datepicker({
     yearFirst: false,
     yearSuffix: '',
     startDate: today
+   
 });
