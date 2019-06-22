@@ -29,12 +29,16 @@ function initMap() {
         lat: 39.9525839,
         lng: -75.1652215
     };
-    // The map, centered at philadelphia
-    map = new google.maps.Map(
-        document.getElementById('ba-map'), {
-            zoom: 8,
-            center: philadelphia
-        });
+    let mapDiv = document.getElementById('ba-map');
+    if (mapDiv) {
+        // The map, centered at philadelphia
+        map = new google.maps.Map(
+            document.getElementById('ba-map'), {
+                zoom: 8,
+                center: philadelphia
+            });
+    }
+
 
 }
 
@@ -63,9 +67,15 @@ const cities = [];
 
 const searchForm = document.getElementById('search-form');
 const hostResults = document.getElementById('hostResults');
-const cardTmpl = document.getElementById("cardTmpl").innerHTML;
+let cardTmpl = document.getElementById("cardTmpl");
+if (cardTmpl) {
+    cardTmpl = cardTmpl.innerHTML;
+}
 
-searchForm.addEventListener('submit', displayMatches);
+if(searchForm){
+    searchForm.addEventListener('submit', displayMatches);
+    
+}
 
 const searchInput = document.getElementById('search');
 
@@ -155,7 +165,7 @@ function displayMatches(event) {
 }
 //clear markers after search
 function clearMarkers() {
-    if (map.markers) {
+    if (map.markers !== undefined) {
         for (var i = 0; i < map.markers.length; i++) {
             map.markers[i].setMap(null);
         }
@@ -182,5 +192,5 @@ $('[data-toggle="datepicker"]').datepicker({
     yearFirst: false,
     yearSuffix: '',
     startDate: today
-   
+
 });
